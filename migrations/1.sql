@@ -1,0 +1,37 @@
+
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  mocha_user_id TEXT NOT NULL UNIQUE,
+  email TEXT NOT NULL,
+  name TEXT,
+  picture TEXT,
+  is_subscriber BOOLEAN DEFAULT 0,
+  is_admin BOOLEAN DEFAULT 0,
+  is_banned BOOLEAN DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE donations (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER,
+  donor_name TEXT NOT NULL,
+  donor_email TEXT,
+  amount REAL NOT NULL,
+  message TEXT,
+  is_anonymous BOOLEAN DEFAULT 0,
+  status TEXT DEFAULT 'pending',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE chat_messages (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER,
+  username TEXT NOT NULL,
+  message TEXT NOT NULL,
+  is_subscriber BOOLEAN DEFAULT 0,
+  is_deleted BOOLEAN DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

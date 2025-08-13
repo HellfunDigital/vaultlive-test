@@ -1,0 +1,2 @@
+
+ALTER TABLE users ADD COLUMN displayed_badges TEXT DEFAULT NULL;

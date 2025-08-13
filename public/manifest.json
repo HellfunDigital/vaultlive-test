@@ -1,0 +1,89 @@
+{
+  "name": "Vaultkeeper.live - Official Live Streaming Hub",
+  "short_name": "Vaultkeeper",
+  "description": "Official streaming hub for Vaultkeeper - Live gaming, interactive chat, community events, and exclusive content.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#8b5cf6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["entertainment", "games", "social"],
+  "icons": [
+    {
+      "src": "https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/932ddb6a-22a8-48bc-9866-39f86563019b.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/932ddb6a-22a8-48bc-9866-39f86563019b.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/932ddb6a-22a8-48bc-9866-39f86563019b.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/932ddb6a-22a8-48bc-9866-39f86563019b.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/932ddb6a-22a8-48bc-9866-39f86563019b.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/932ddb6a-22a8-48bc-9866-39f86563019b.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/imresizer-1722144221790.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Vaultkeeper Live Streaming Experience"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Live Stream",
+      "short_name": "Stream",
+      "description": "Watch Vaultkeeper live on Kick",
+      "url": "https://kick.com/Vaultkeeper",
+      "icons": [
+        {
+          "src": "https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/932ddb6a-22a8-48bc-9866-39f86563019b.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "DeadBeat Store",
+      "short_name": "Store",
+      "description": "Shop DeadBeat Fashion merchandise",
+      "url": "https://vaults-merch-stand.printify.me/",
+      "icons": [
+        {
+          "src": "https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/Pkwyi1qATDulvsRMQsr0Xg.webp",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

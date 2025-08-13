@@ -1,0 +1,9 @@
+
+CREATE TABLE test_alerts (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  type TEXT NOT NULL,
+  username TEXT NOT NULL,
+  amount REAL,
+  message TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Production optimizations */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .glitch::before,
+  .glitch::after {
+    animation: none !important;
+  }
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.glitch::before {
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+  color: #ff0040;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+.glitch::after {
+  animation: glitch-anim-2 1s infinite linear alternate-reverse;
+  color: #00ffff;
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+}
+
+/* Glitch container for buttons */
+.glitch-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.glitch-container:hover .glitch::before,
+.glitch-container:hover .glitch::after {
+  animation-duration: 0.3s;
+}
+
+@keyframes glitch-anim-1 {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(-2px, 2px);
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Loading animation improvements */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Performance optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .bg-gray-800 {
+    background-color: #000000 !important;
+  }
+  
+  .bg-gray-900 {
+    background-color: #000000 !important;
+  }
+  
+  .text-gray-300 {
+    color: #ffffff !important;
+  }
+  
+  .text-gray-400 {
+    color: #ffffff !important;
+  }
+}
+
+/* Points Shop Effects */
+.rainbow-text {
+  background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow-shift 3s ease-in-out infinite;
+}
+
+@keyframes rainbow-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.highlight-glow {
+  text-shadow: 0 0 8px #ffd700, 0 0 16px #ffd700, 0 0 24px #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 8px;
+  padding: 2px 4px;
+}
+
+.name-glow {
+  text-shadow: 0 0 8px currentColor, 0 0 16px currentColor;
+  font-weight: bold;
+}
+
+/* Pin message styles */
+.paid-pin {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 165, 0, 0.1));
+  border-left: 4px solid #ffd700;
+  animation: paid-pin-glow 2s ease-in-out infinite;
+}
+
+@keyframes paid-pin-glow {
+  0%, 100% { 
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    border-left-color: #ffd700;
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    border-left-color: #ffed4e;
+  }
+}
+
+.admin-pin {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.1));
+  border-left: 4px solid #3b82f6;
+}
+
+/* Performance improvements */
+.will-change-auto {
+  will-change: auto;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+/* Memory leak prevention */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Better text rendering */
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent layout shifts */
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
+}

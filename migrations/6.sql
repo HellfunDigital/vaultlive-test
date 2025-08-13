@@ -1,0 +1,2 @@
+
+ALTER TABLE users ADD COLUMN is_moderator BOOLEAN DEFAULT 0;

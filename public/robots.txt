@@ -1,0 +1,45 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://vaultkeeper.live/sitemap.xml
+
+# Specific crawling preferences
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Social media crawlers
+User-agent: facebookexternalhit/*
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Disallow admin areas (if any exist in the future)
+Disallow: /admin/
+Disallow: /api/internal/
+Disallow: /*.json$
+Disallow: /temp/
+Disallow: /cache/
+
+# Allow important files
+Allow: /manifest.json
+Allow: /browserconfig.xml

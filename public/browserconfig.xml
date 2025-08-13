@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/932ddb6a-22a8-48bc-9866-39f86563019b.png"/>
+      <square150x150logo src="https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/932ddb6a-22a8-48bc-9866-39f86563019b.png"/>
+      <square310x310logo src="https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/932ddb6a-22a8-48bc-9866-39f86563019b.png"/>
+      <wide310x150logo src="https://mocha-cdn.com/01987112-f036-7d2d-8b3f-02e13c03a71b/932ddb6a-22a8-48bc-9866-39f86563019b.png"/>
+      <TileColor>#8b5cf6</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
